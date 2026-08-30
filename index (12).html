@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DesiInAmerica.com - discover Indian events, businesses, jobs, rentals, movies, deals and community updates across the United States." />
+  <title>DesiInAmerica | Indian Events, Jobs, Classifieds & Businesses in the USA</title>
+  <link rel="canonical" href="https://www.desiinamerica.com/" />
+  <meta property="og:title" content="DesiInAmerica | Your Indian Community in America" />
+  <meta property="og:description" content="Find Indian events, jobs, rentals, local businesses, movies, deals and community updates across the USA." />
+  <meta property="og:url" content="https://www.desiinamerica.com/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>🇮🇳 Connecting Indian communities across the U.S.</span>
+      <div class="top-links">
+        <a href="#advertise">Advertise</a>
+        <a href="#newsletter">Newsletter</a>
+        <button class="link-button" id="openAccount">My Account</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="DesiInAmerica home">
+        <span class="brand-mark">DIA</span>
+        <span>
+          <strong>DesiInAmerica</strong>
+          <small>Desi life across America.</small>
+        </span>
+      </a>
+
+      <div class="city-picker-wrap">
+        <label for="cityPicker">Your city</label>
+        <select id="cityPicker" aria-label="Select your city">
+          <option>Dallas</option>
+          <option>Austin</option>
+          <option>Houston</option>
+          <option>New York</option>
+          <option>New Jersey</option>
+          <option>Chicago</option>
+          <option>Bay Area</option>
+          <option>Los Angeles</option>
+          <option>Atlanta</option>
+          <option>Seattle</option>
+        </select>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="container nav-inner">
+        <a href="#home" class="active">Home</a>
+        <a href="#events">Events</a>
+        <a href="#movies">Movies</a>
+        <a href="#businesses">Yellow Pages</a>
+        <a href="#classifieds">Classifieds</a>
+        <a href="#topics">Topics</a>
+        <a href="#coupons">Coupons</a>
+        <button class="nav-cta" id="postListingBtn">+ Post Free Listing</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Your local Indian community hub</span>
+          <h1>Discover what’s happening <span>around you.</span></h1>
+          <p>Find desi events, local businesses, jobs, rentals, movies, deals and community updates — all in one place.</p>
+
+          <form class="hero-search" id="globalSearchForm">
+            <input id="globalSearch" type="search" placeholder="Search events, restaurants, jobs, rentals..." aria-label="Search the site" />
+            <button type="submit">Search</button>
+          </form>
+
+          <div class="quick-links">
+            <button data-jump="#events">🎉 Events</button>
+            <button data-jump="#businesses">🏪 Businesses</button>
+            <button data-jump="#classifieds">📣 Classifieds</button>
+            <button data-jump="#movies">🎬 Movies</button>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Local community highlights">
+          <div class="hero-card-header">
+            <span>📍 <strong id="heroCity">Dallas</strong></span>
+            <span class="live-dot">Updated today</span>
+          </div>
+          <div class="stat-grid">
+            <div><strong>24</strong><span>Upcoming events</span></div>
+            <div><strong>138</strong><span>Local businesses</span></div>
+            <div><strong>57</strong><span>New classifieds</span></div>
+            <div><strong>12</strong><span>Movies showing</span></div>
+          </div>
+          <div class="mini-event">
+            <div class="date-badge"><b>05</b><span>SEP</span></div>
+            <div>
+              <small>Featured event</small>
+              <h3>DFW India Cultural Night</h3>
+              <p>Irving • 6:00 PM</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="category-strip">
+      <div class="container category-grid">
+        <a href="#events"><span>🎊</span><b>Events</b><small>Concerts & festivals</small></a>
+        <a href="#businesses"><span>🍛</span><b>Restaurants</b><small>Food near you</small></a>
+        <a href="#classifieds"><span>💼</span><b>Jobs</b><small>Local opportunities</small></a>
+        <a href="#classifieds"><span>🏠</span><b>Rentals</b><small>Rooms & apartments</small></a>
+        <a href="#businesses"><span>🛒</span><b>Groceries</b><small>Indian stores</small></a>
+        <a href="#coupons"><span>🏷️</span><b>Deals</b><small>Save locally</small></a>
+      </div>
+    </section>
+
+    <section class="section" id="events" data-search-section>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">What’s happening</span><h2>Upcoming events in <span class="dynamic-city">Dallas</span></h2></div>
+          <button class="text-cta" data-open-modal="event">Submit an event →</button>
+        </div>
+        <div class="cards-grid event-grid" id="eventGrid"></div>
+      </div>
+    </section>
+
+    <section class="section soft" id="businesses" data-search-section>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Yellow pages</span><h2>Popular local businesses</h2></div>
+          <a class="text-cta" href="#directory">Browse all →</a>
+        </div>
+        <div class="business-layout">
+          <div class="business-categories">
+            <button class="business-filter active" data-category="All">All</button>
+            <button class="business-filter" data-category="Restaurant">Restaurants</button>
+            <button class="business-filter" data-category="Grocery">Groceries</button>
+            <button class="business-filter" data-category="Services">Services</button>
+            <button class="business-filter" data-category="Education">Education</button>
+          </div>
+          <div class="business-list" id="businessList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="classifieds" data-search-section>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Community marketplace</span><h2>Fresh classifieds</h2></div>
+          <button class="primary-small" data-open-modal="classified">+ Post an ad</button>
+        </div>
+
+        <div class="classified-layout">
+          <div class="classified-tabs" id="classifiedTabs">
+            <button class="active" data-classified="All">All</button>
+            <button data-classified="Jobs">Jobs</button>
+            <button data-classified="Rentals">Rentals</button>
+            <button data-classified="For Sale">For Sale</button>
+            <button data-classified="Services">Services</button>
+          </div>
+          <div class="classified-list" id="classifiedList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="movies" data-search-section>
+      <div class="container">
+        <div class="section-heading light-heading">
+          <div><span class="eyebrow">Now playing</span><h2>Indian movies near you</h2></div>
+          <a class="text-cta light" href="#movies">View showtimes →</a>
+        </div>
+        <div class="movie-grid" id="movieGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="topics" data-search-section>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Explore & enjoy</span><h2>Community topics</h2></div>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card recipe-card">
+            <div class="topic-icon">🥘</div><small>Recipes</small><h3>Easy weekend biryani</h3><p>A comforting one-pot recipe for family gatherings.</p><a href="#">Read recipe →</a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">🪔</div><small>Festivals</small><h3>Festival calendar</h3><p>Keep track of major Indian holidays and celebrations.</p><a href="#">See calendar →</a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">👨‍👩‍👧</div><small>Parenting</small><h3>Raising kids between cultures</h3><p>Practical ideas for language, traditions and community.</p><a href="#">Read article →</a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">📰</div><small>Local news</small><h3>Community updates</h3><p>Announcements, openings, associations and neighborhood news.</p><a href="#">View updates →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="coupons" data-search-section>
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Save locally</span><h2>Deals & coupons</h2></div>
+        </div>
+        <div class="coupon-grid">
+          <article class="coupon"><div><small>RESTAURANT</small><h3>15% OFF</h3><p>Spice Route Kitchen</p></div><button>Get deal</button></article>
+          <article class="coupon"><div><small>GROCERY</small><h3>$10 OFF</h3><p>Desi Fresh Market</p></div><button>Get deal</button></article>
+          <article class="coupon"><div><small>SERVICES</small><h3>FREE CONSULT</h3><p>Patel Tax & Finance</p></div><button>Claim</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-inner">
+        <div><span class="eyebrow">Stay in the loop</span><h2>Your city’s best desi updates, once a week.</h2><p>Events, deals, jobs and community picks. No spam.</p></div>
+        <form id="newsletterForm"><input type="email" placeholder="Your email address" required aria-label="Email address" /><button type="submit">Join free</button></form>
+      </div>
+    </section>
+
+    <section class="section advertise" id="advertise">
+      <div class="container advertise-inner">
+        <div><span class="eyebrow">Grow your local reach</span><h2>Own a business or organizing an event?</h2><p>Promote it to a highly relevant local Indian community audience.</p></div>
+        <button class="primary" data-open-modal="business">List your business</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#home"><span class="brand-mark">DIA</span><span><strong>DesiInAmerica</strong><small>Desi life across America.</small></span></a><p>Connecting Indian communities across America with local events, businesses, jobs, rentals and community resources.</p></div>
+      <div><h4>Explore</h4><a href="#events">Events</a><a href="#businesses">Businesses</a><a href="#classifieds">Classifieds</a><a href="#movies">Movies</a></div>
+      <div><h4>Community</h4><a href="#topics">Topics</a><a href="#coupons">Coupons</a><a href="#newsletter">Newsletter</a><a href="#advertise">Advertise</a></div>
+      <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a><a href="#">About</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> DesiInAmerica.com. All rights reserved.</span><span>Connecting the Indian community across America.</span></div>
+  </footer>
+
+  <dialog id="listingModal">
+    <form method="dialog" class="modal-card" id="listingForm">
+      <div class="modal-head"><div><span class="eyebrow">Community submission</span><h2 id="modalTitle">Post a listing</h2></div><button class="close-modal" value="cancel" aria-label="Close">×</button></div>
+      <input type="hidden" id="listingType" value="classified" />
+      <div class="form-grid">
+        <label>Title<input id="listingTitle" required placeholder="Enter a clear title" /></label>
+        <label>Category<select id="listingCategory"><option>Jobs</option><option>Rentals</option><option>For Sale</option><option>Services</option><option>Event</option><option>Business</option></select></label>
+        <label>City<input id="listingCity" required value="Dallas" /></label>
+        <label>Contact<input id="listingContact" placeholder="Email or phone" /></label>
+        <label class="full">Description<textarea id="listingDescription" rows="4" required placeholder="Add useful details..."></textarea></label>
+      </div>
+      <div class="modal-note">Demo mode: submissions are stored only in this browser using localStorage.</div>
+      <div class="modal-actions"><button value="cancel" class="secondary">Cancel</button><button type="submit" value="default" class="primary">Publish demo listing</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
